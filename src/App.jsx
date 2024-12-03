@@ -1,6 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Carousel from "./components/Carousel";
+import Tentang from "./components/Tentang";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <header>
         <Navbar />
         <Carousel />
+        <Tentang />
       </header>
     </>
   );
