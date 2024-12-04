@@ -3,8 +3,8 @@ import "../output.css";
 function Navbar() {
   return (
     <div className="navbar bg-slate-100 text-black">
-      <div className="navbar-start py-3 mx-20">
-        <div className="dropdown">
+      <div className="navbar-start py-3 sm:mx-20">
+        <div className="dropdown mr-2">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -27,20 +27,19 @@ function Navbar() {
               <a href="/">beranda</a>
             </li>
             <li>
-              <a href="/">Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a href="/">Submenu 1</a>
-                </li>
-                <li>
-                  <a href="/">Submenu 2</a>
-                </li>
-              </ul>
+              <a href="/kontak">kontak</a>
+            </li>
+            <li>
+              <a href="/layanan">layanan</a>
             </li>
           </ul>
         </div>
-        <img className="sm:h-14 sm:mx-5 h-8" src="/media/logo.png" alt="" />
-        <h1 className="sm:text-2xl text-sm">Diskominfo Kota Lhokseumawe</h1>
+        <img
+          className="sm:h-14 sm:mx-5 h-8 hidden sm:block"
+          src="/media/logo.png"
+          alt=""
+        />
+        <h1 className="sm:text-2xl font-light">Diskominfo Kota Lhokseumawe</h1>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -48,77 +47,11 @@ function Navbar() {
             <a href="/">beranda</a>
           </li>
           <li>
-            <details>
-              <summary>profil</summary>
-              <ul className="p-2">
-                <li>
-                  <a href="/">Submenu 1</a>
-                </li>
-                <li>
-                  <a href="/">Submenu 2</a>
-                </li>
-              </ul>
-            </details>
+            <a href="/kontak">kontak</a>
           </li>
           <li>
-            <details>
-              <summary>publikasi</summary>
-              <ul className="p-2">
-                <li>
-                  <a href="/">Submenu 1</a>
-                </li>
-                <li>
-                  <a href="/">Submenu 2</a>
-                </li>
-              </ul>
-            </details>
+            <a href="/layanan">layanan</a>
           </li>
-          <li>
-            <details>
-              <summary>layanan</summary>
-              <ul className="p-2">
-                <li>
-                  <a href="/">Submenu 1</a>
-                </li>
-                <li>
-                  <a href="/">Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <details>
-              <summary>informasi</summary>
-              <ul className="p-2">
-                <li>
-                  <a href="/">Submenu 1</a>
-                </li>
-                <li>
-                  <a href="/">Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a href="/">unduhan</a>
-          </li>
-          <li>
-            <details>
-              <summary>galeri</summary>
-              <ul className="p-2">
-                <li>
-                  <a href="/">Submenu 1</a>
-                </li>
-                <li>
-                  <a href="/">Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a href="/">kontak</a>
-          </li>
-          <li></li>
         </ul>
       </div>
       <div className="navbar-end sm:mr-20 mr-10">

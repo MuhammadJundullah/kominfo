@@ -2,15 +2,15 @@ import "../App.css";
 
 function Tentang() {
   return (
-    <div className="hero min-h-screen">
+    <div className="hero min-h-screen" id="tentang">
       <div className="hero-content flex-col lg:flex-row-reverse text-white">
         <img
           src="https://kominfo.lhokseumawekota.go.id/assets/upload/image/icon-lhokseumawe.png"
-          className="max-w-sm rounded-lg "
+          className="max-w-sm rounded-lg sm:w-full w-1/2 sm:block hidden"
         />
         <div>
           <h1 className="text-5xl font-bold">Tentang Kami</h1>
-          <p className="py-6">
+          <p className="py-10 leading-8 sm:text-xl font-light">
             Dinas Komunikasi, Informatika dan Persandian Kota Lhokseumawe
             memiliki visi "Terciptanya Pelayanan Publik Yang Terbaik melalui
             penerapan Teknologi Informatika dan Komunikasi Publik yang handal
