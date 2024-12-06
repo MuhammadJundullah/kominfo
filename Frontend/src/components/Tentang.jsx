@@ -8,12 +8,12 @@ function Tentang() {
           src="https://kominfo.lhokseumawekota.go.id/assets/upload/image/icon-lhokseumawe.png"
           className="max-w-sm rounded-lg sm:w-full w-1/2 sm:block hidden"
         />
-        <div>
-          <span className="flex items-center text-white">
+        <div className="pt-10 sm:pt-0">
+          <span className="flex items-center text-gray-300 font-semibold">
             <span className="pr-6">Diskominfo Kota Lhokseumawe</span>
             <span className="h-px flex-1 bg-white"></span>
           </span>
-          <h1 className="sm:text-5xl font-bold text-2xl">Tentang Kami</h1>
+          <h1 className="sm:text-5xl font-bold text-4xl">Tentang Kami</h1>
           <p className="py-8 leading-8  sm:text-xl font-light text-md">
             Dinas Komunikasi, Informatika dan Persandian Kota Lhokseumawe
             memiliki visi "Terciptanya Pelayanan Publik Yang Terbaik melalui
