@@ -15,10 +15,10 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $users = [
-            ['nama' => 'Rizky Khapidsyah', 'jabatan' => 'Staff Kominfo'],
-            ['nama' => 'Andi Wijaya', 'jabatan' => 'Staff Kominfo'],
-            ['nama' => 'Budi Santoso', 'jabatan' => 'Staff Kominfo'],
-            ['nama' => 'Citra Dewi', 'jabatan' => 'Staff Kominfo'],
+            ['nama' => 'Rizky Khapidsyah', 'jabatan' => 'Staff Kominfo', 'foto' => 'staff.png'],
+            ['nama' => 'Andi Wijaya', 'jabatan' => 'Staff Kominfo', 'foto' => 'staff.png'],
+            ['nama' => 'Budi Santoso', 'jabatan' => 'Staff Kominfo', 'foto' => 'staff.png'],
+            ['nama' => 'Citra Dewi', 'jabatan' => 'Staff Kominfo', 'foto' => 'staff.png'],
         ];
 
         foreach ($users as $staff) {

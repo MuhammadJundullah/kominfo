@@ -46,7 +46,8 @@ function StrukturStaff() {
             className="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg">
             <img
               alt={member.nama} // Gantilah dengan nama staff atau informasi lainnya
-              src="https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" // Gantilah dengan URL foto jika ada
+              // src="https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" // Gantilah dengan URL foto jika ada
+              src={`http://127.0.0.1:8000${member.foto}`}
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="relative bg-gradient-to-t from-gray-900/50 to-gray-900/25 pt-32 sm:pt-48 lg:pt-64">

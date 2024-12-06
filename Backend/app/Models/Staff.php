@@ -9,5 +9,6 @@ class Staff extends Model
     protected $fillable = [
         'nama',
         'jabatan',
+        'foto',
     ];
 }

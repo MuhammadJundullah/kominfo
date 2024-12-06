@@ -2,7 +2,7 @@ import "../App.css";
 
 function Tentang() {
   return (
-    <div className="hero min-h-screen" id="tentang">
+    <div className="hero min-h-screen bg-gray-800" id="tentang">
       <div className="hero-content flex-col lg:flex-row-reverse text-white">
         <img
           src="https://kominfo.lhokseumawekota.go.id/assets/upload/image/icon-lhokseumawe.png"

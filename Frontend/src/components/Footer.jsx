@@ -2,7 +2,7 @@ import "../App.css";
 
 function Footer() {
   return (
-    <footer className="footer footer-center bg-base text-white p-10">
+    <footer className="footer footer-center bg-gray-800 text-white p-10">
       <aside>
         <img
           src="https://kominfo.lhokseumawekota.go.id/assets/upload/image/icon-lhokseumawe.png"
