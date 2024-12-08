@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             ['nama' => 'Andi Wijaya', 'jabatan' => 'Staff Kominfo', 'foto' => 'staff.png'],
             ['nama' => 'Budi Santoso', 'jabatan' => 'Staff Kominfo', 'foto' => 'staff.png'],
             ['nama' => 'Citra Dewi', 'jabatan' => 'Staff Kominfo', 'foto' => 'staff.png'],
+            ['nama' => 'Budi', 'jabatan' => 'Staff Kominfo', 'foto' => 'staff.png'],
         ];
 
         foreach ($users as $staff) {

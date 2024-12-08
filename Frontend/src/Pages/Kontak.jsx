@@ -1,6 +1,5 @@
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
-import "../App.css";
 
 const Kontak = () => {
   // Intersection Observer hooks untuk dua elemen
@@ -39,7 +38,7 @@ const Kontak = () => {
         <img
           src="/media/kominfo-kontak.jpg"
           alt="Kontak"
-          className="absolute inset-0 h-full w-full object-cover rounded-lg shadow-2xl"
+          className="absolute inset-0 sm:h-full w-full object-cover sm:rounded-lg shadow-2xl"
         />
       </animated.div>
 
@@ -49,7 +48,7 @@ const Kontak = () => {
         className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8"
         style={divAnimation} // Aplikasikan animasi ke div
       >
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 py-10 sm:px-0">
           <div>
             <p>
               <span className="text-xs uppercase tracking-wide text-gray-500">
@@ -63,8 +62,8 @@ const Kontak = () => {
             </p>
 
             <ul className="mt-8 space-y-1 text-sm text-gray-700">
-              <li>Monday to Friday: 10am - 5pm</li>
-              <li>Weekend: 10am - 3pm</li>
+              <li>Senin - Jumat : 10.0 WIB - 17.00 WIB</li>
+              <li>Weekend : 10.00 WIB - 15.00 WIB</li>
             </ul>
 
             <ul className="mt-8 flex gap-6">

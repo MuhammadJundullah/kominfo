@@ -9,7 +9,7 @@ function Carousel() {
   // Intersection Observer hook untuk mendeteksi elemen yang masuk viewport
   const { ref, inView: isInView } = useInView({
     triggerOnce: true, // Animasi hanya dijalankan sekali
-    threshold: 1, // Elemen dianggap masuk viewport ketika 30% terlihat
+    threshold: 0.3, // Elemen dianggap masuk viewport ketika 30% terlihat
   });
 
   // React Spring animasi untuk gambar

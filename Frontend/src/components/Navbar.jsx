@@ -24,13 +24,16 @@ function Navbar() {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-slate-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
             <li>
-              <a href="/">beranda</a>
+              <a href="/">Beranda</a>
             </li>
             <li>
-              <a href="/kontak">kontak</a>
+              <a href="/kontak">Kontak</a>
             </li>
             <li>
-              <a href="/layanan">layanan</a>
+              <a href="/layanan">Layanan</a>
+            </li>
+            <li>
+              <a href="/informasi-publik">Informasi Publik</a>
             </li>
           </ul>
         </div>
@@ -46,13 +49,16 @@ function Navbar() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a href="/">beranda</a>
+            <a href="/">Beranda</a>
           </li>
           <li>
-            <a href="/kontak">kontak</a>
+            <a href="/kontak">Kontak</a>
           </li>
           <li>
-            <a href="/layanan">layanan</a>
+            <a href="/layanan">Layanan</a>
+          </li>
+          <li>
+            <a href="/informasi-publik">Informasi Publik</a>
           </li>
         </ul>
       </div>
