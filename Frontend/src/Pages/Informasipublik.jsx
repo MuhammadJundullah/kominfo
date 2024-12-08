@@ -2,7 +2,7 @@ function Informasipublik() {
     return (
       <>
         <div className="overflow-x-auto py-20 px-20">
-        <h2 className="text-center text-2xl font-bold py-10 pb-32">Informasi Publik</h2>
+        <h2 className="text-center text-2xl font-bold py-10 pb-32">Informasi Publikk</h2>
           <table className="table">
             {/* head */}
             <thead>
