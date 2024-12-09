@@ -14,5 +14,8 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 Route::get('/informasi-publik', [postsController::class, 'informasipublik']);
 
-
 Route::get('/staff', [postsController::class, 'index']);
+
+Route::post('/tambah-informasipublik', [postsController::class, 'informasipost']);
+
+Route::post('/delete-informasipublik/{id?}', [postsController::class, 'delete_informasipublik']);

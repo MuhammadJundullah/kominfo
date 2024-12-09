@@ -22,7 +22,7 @@ const Login = () => {
         localStorage.setItem("authToken", response.data.token);
 
         // Redirect ke halaman dashboard
-        navigate("/dashboard");
+        navigate("/informasi-publik");
       } else {
         setError(response.data.message || "Login failed");
       }

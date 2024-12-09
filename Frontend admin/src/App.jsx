@@ -4,6 +4,8 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./ProtectedRoute";
 import DataStaff from "./pages/DataStaff";
+import TambahInformasiPublik from "./pages/TambahInformasiPublik";
+import Notfound from "./pages/Notfound";
 
 const App = () => {
   return (
@@ -11,7 +13,7 @@ const App = () => {
       <Routes>
         {/* Route untuk Dashboard */}
         <Route
-          path="/Dashboard"
+          path="/informasi-publik"
           element={
             <ProtectedRoute>
               <Dashboard />
@@ -21,7 +23,7 @@ const App = () => {
 
         {/* Route untuk Informasi Publik */}
         <Route
-          path="/informasi-publik"
+          path="/data-staff"
           element={
             <ProtectedRoute>
               <DataStaff />
@@ -29,8 +31,21 @@ const App = () => {
           }
         />
 
+        {/* Route untuk Informasi Publik */}
+        <Route
+          path="/informasi-publik/tambah"
+          element={
+            <ProtectedRoute>
+              <TambahInformasiPublik />
+            </ProtectedRoute>
+          }
+        />
+
         {/* Route untuk halaman Login */}
         <Route path="/login" element={<Login />} />
+
+        {/* Route untuk halaman Login */}
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </Router>
   );

@@ -71,4 +71,46 @@ class postsController extends Controller
         ]);
     }
 
+    public function informasipost(Request $request)
+    {
+        $request->validate([
+            'informasi' => 'required|string',
+            'judul' => 'required|string',
+            'url' => 'required|string',
+            'tanggal' => 'required|string',
+        ]);
+
+        $data = new informasi_publiks();
+        $data->informasi = $request->informasi;
+        $data->judul = $request->judul;
+        $data->url = $request->url;
+        $data->dibuat = $request->tanggal;
+        $data->save();
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Data berhasil ditambahkan',
+            'data' => $data,
+        ]);
+    }
+
+    public function delete_informasipublik($id)
+    {
+        $data = informasi_publiks::find($id);
+
+        if (!$data) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Data not found',
+            ], 404);
+        }
+
+        $data->delete();
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Data berhasil dihapus',
+        ]);
+    }
+
 }
