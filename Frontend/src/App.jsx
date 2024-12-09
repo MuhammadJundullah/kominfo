@@ -6,6 +6,7 @@ import Kontak from "./Pages/Kontak";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Informasipublik from "./Pages/Informasipublik";
+import Notfound from "./Pages/Notfound";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
             <Route path="/Layanan" element={<Layanan></Layanan>} />
             <Route path="/Kontak" element={<Kontak></Kontak>} />
             <Route path="/informasi-publik" element={<Informasipublik></Informasipublik>} />
-            <Route path="/*" element={<Kontak></Kontak>} />
+            <Route path="/*" element={<Notfound/>} />
           </Routes>
         </Router>
       </header>

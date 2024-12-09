@@ -31,20 +31,22 @@ function Tentang() {
         <animated.img
           ref={ref} // Menambahkan ref ke gambar untuk intersection observer
           src="https://kominfo.lhokseumawekota.go.id/assets/upload/image/icon-lhokseumawe.png"
-          className="max-w-sm rounded-lg sm:w-full w-1/2 sm:block hidden"
+          className="max-w-xs rounded-lg sm:w-full w-1/2 sm:block hidden md:py-20"
           alt="Logo of Diskominfo Kota Lhokseumawe"
           style={imgAnimation} // Mengaplikasikan animasi ke gambar
         />
         <animated.div
           ref={ref}
-          className="pt-10 sm:pt-0"
+          className="pt-10 sm:pt-0 sm:mx-10"
           style={divAnimation}>
-          <span className="flex items-center text-gray-300 font-semibold">
-            <span className="pr-6">Diskominfo Kota Lhokseumawe</span>
-            <span className="h-px flex-1 bg-white"></span>
-          </span>
-          <h1 className="sm:text-5xl font-bold text-4xl">Tentang Kami</h1>
-          <p className="py-8 leading-8  sm:text-xl font-light text-md">
+          <div>
+            <span className="flex items-center text-gray-300 font-semibold">
+              <span className="pr-6">Diskominfo Kota Lhokseumawe</span>
+              <span className="h-px flex-1 bg-white"></span>
+            </span>
+            <h1 className="sm:text-5xl font-bold text-4xl">Tentang Kami</h1>
+          </div>
+          <p className="py-8 leading-10 text-xl">
             Dinas Komunikasi, Informatika dan Persandian Kota Lhokseumawe
             memiliki visi "Terciptanya Pelayanan Publik Yang Terbaik melalui
             penerapan Teknologi Informatika dan Komunikasi Publik yang handal

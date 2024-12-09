@@ -45,10 +45,22 @@ const Kontak = () => {
       {/* Konten dengan animasi */}
       <animated.div
         ref={divRef} // Menambahkan ref untuk div konten
-        className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8"
+        className="sm:px-10 sm:py-0 py-32 px-5"
         style={divAnimation} // Aplikasikan animasi ke div
       >
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 py-10 sm:px-0">
+        <div>
+          <div className="py-5 sm:py-0">
+            <p>
+              <span className="text-xs uppercase tracking-wide text-gray-500">
+                Email us
+              </span>
+              <a
+                href="mailto:kominfo@lhokseumawe.go.id"
+                className="block text-2xl font-extralight text-gray-900 hover:opacity-75 sm:text-3xl">
+                kominfo@lhokseumawe.go.id
+              </a>
+            </p>
+          </div>
           <div>
             <p>
               <span className="text-xs uppercase tracking-wide text-gray-500">
@@ -173,19 +185,6 @@ const Kontak = () => {
                 </a>
               </li>
             </ul>
-          </div>
-
-          <div>
-            <p>
-              <span className="text-xs uppercase tracking-wide text-gray-500">
-                Email us
-              </span>
-              <a
-                href="mailto:kominfo@lhokseumawe.go.id"
-                className="block text-2xl font-extralight text-gray-900 hover:opacity-75 sm:text-3xl">
-                kominfo@lhokseumawe.go.id
-              </a>
-            </p>
           </div>
         </div>
       </animated.div>
