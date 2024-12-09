@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Resources\postsResource;
+use App\Models\informasi_publiks;
 
 class postsController extends Controller
 {
@@ -36,6 +37,17 @@ class postsController extends Controller
             'message' => 'Invalid credentials',
         ], 401);
     }
+
+    public function logout(Request $request)
+    {
+        // Hapus token pengguna
+        $request->user()->currentAccessToken()->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Logged out successfully.',
+        ]);
+    }
     
     public function index()
     {
@@ -47,4 +59,16 @@ class postsController extends Controller
             'data' => postsResource::collection($staff),
         ]);
     }
+
+    public function informasipublik()
+    {
+        $data = informasi_publiks::all();
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Data berhasil diambil',
+            'data' => $data,
+        ]);
+    }
+
 }
