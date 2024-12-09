@@ -6,6 +6,7 @@ use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Staff;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,7 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $users = [
+        $staff = [
             ['nama' => 'Rizky Khapidsyah', 'jabatan' => 'Staff Kominfo', 'foto' => 'staff.png'],
             ['nama' => 'Andi Wijaya', 'jabatan' => 'Staff Kominfo', 'foto' => 'staff.png'],
             ['nama' => 'Budi Santoso', 'jabatan' => 'Staff Kominfo', 'foto' => 'staff.png'],
@@ -22,8 +23,16 @@ class DatabaseSeeder extends Seeder
             ['nama' => 'Budi', 'jabatan' => 'Staff Kominfo', 'foto' => 'staff.png'],
         ];
 
-        foreach ($users as $staff) {
-            Staff::create($staff);
+        foreach ($staff as $item) {
+            Staff::create($item);
+        }
+
+        $users = [
+            ['username' => 'admin', 'password' => Hash::make('admin'), 'email' => 'admin@gmail.com']
+        ];
+
+        foreach ($users as $user) {
+            User::create($user);
         }
     }
 }

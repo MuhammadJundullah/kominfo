@@ -1,7 +1,7 @@
 function Informasipublik() {
     return (
       <>
-        <div className="overflow-x-auto py-20 px-20">
+        <div className="overflow-x-auto py-20 px-20 h-screen">
           <h2 className="text-center text-2xl font-bold py-10 pb-20">
             Informasi Publik
           </h2>
@@ -9,33 +9,49 @@ function Informasipublik() {
             {/* head */}
             <thead>
               <tr>
+                <th>Informasi</th>
+                <th>Judul</th>
+                <th>Dibuat</th>
+                <th>Tgl Dokumen</th>
+                <th>File</th>
+                <th>File</th>
+                <th>Ukuran</th>
                 <th></th>
-                <th>Name</th>
-                <th>Job</th>
-                <th>Favorite Color</th>
               </tr>
             </thead>
             <tbody>
               {/* row 1 */}
               <tr>
-                <th>1</th>
-                <td>Cy Ganderton</td>
-                <td>Quality Control Specialist</td>
-                <td>Blue</td>
+                <th>Tersedia setiap saat</th>
+                <td>RTP BPKD Tahun 2023</td>
+                <td>Rencana Tindak Pengendalian (RTP) BPKD Tahun 2023</td>
+                <td>01-02-2024</td>
+                <td>03-07-2023</td>
+                <td>url</td>
+                <td>0 Bytes</td>
+                <td>Link</td>
               </tr>
               {/* row 2 */}
               <tr>
-                <th>2</th>
-                <td>Hart Hagerty</td>
-                <td>Desktop Support Technician</td>
-                <td>Purple</td>
+                <th>Tersedia setiap saat</th>
+                <td>RTP BPKD Tahun 2023</td>
+                <td>Rencana Tindak Pengendalian (RTP) BPKD Tahun 2023</td>
+                <td>01-02-2024</td>
+                <td>03-07-2023</td>
+                <td>url</td>
+                <td>0 Bytes</td>
+                <td>Link</td>
               </tr>
               {/* row 3 */}
               <tr>
-                <th>3</th>
-                <td>Brice Swyre</td>
-                <td>Tax Accountant</td>
-                <td>Red</td>
+                <th>Tersedia setiap saat</th>
+                <td>RTP BPKD Tahun 2023</td>
+                <td>Rencana Tindak Pengendalian (RTP) BPKD Tahun 2023</td>
+                <td>01-02-2024</td>
+                <td>03-07-2023</td>
+                <td>url</td>
+                <td>0 Bytes</td>
+                <td>Link</td>
               </tr>
             </tbody>
           </table>
