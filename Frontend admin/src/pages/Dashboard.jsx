@@ -3,6 +3,7 @@ import DeleteButton from "../components/DeleteInfoPublik";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
+import { format } from "date-fns"; // Import format dari date-fns
 
 function Dashboard() {
   const [informasi, setInformasiPublik] = useState([]);
@@ -48,9 +49,9 @@ function Dashboard() {
         <h1 className="text-4xl font-bold pb-5">Data Informasi Publik</h1>
 
         {/* button tambah */}
-        <div className="py-10">
+        <div className="pb-24">
           <a
-            className="inline-flex items-center gap-2 rounded border border-indigo-600 px-8 py-3 text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
+            className="inline-flex items-center gap-2 rounded text-indigo-600  hover:text-indigo-400 transition-colors"
             href="/informasi-publik/tambah">
             <span className="text-sm font-medium"> Tambah data </span>
 
@@ -71,64 +72,67 @@ function Dashboard() {
         </div>
         {/* button tambah */}
 
-        <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
-          <thead className="ltr:text-left rtl:text-right">
-            <tr>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                Informasi
-              </th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                Judul
-              </th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                Dibuat
-              </th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                Tanggal Dokumen
-              </th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                Ukuran
-              </th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                File
-              </th>
-              <th></th>
-            </tr>
-          </thead>
-
-          <tbody className="divide-y divide-gray-200 text-center">
-            {informasi.map((member) => (
-              <tr key={member.id}>
-                <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                  {member.informasi}
-                </td>
-                <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                  {member.judul}
-                </td>
-                <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                  {member.created_at}
-                </td>
-                <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                  {member.dibuat}
-                </td>
-                <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                  {member.ukuran}
-                </td>
-                <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                  <a href={member.url} target="_blank">
-                    Download
-                  </a>
-                </td>
-                <td className="whitespace-nowrap px-4 py-2 text-red-600">
-                  <DeleteButton
-                    id={member.id}
-                    onSuccess={handleDeleteSuccess}
-                  />
-                </td>
+        <div className="overflow-auto">
+          <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+            <thead className="ltr:text-left rtl:text-right">
+              <tr>
+                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  Informasi
+                </th>
+                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  Judul
+                </th>
+                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  Dibuat
+                </th>
+                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  Tanggal Dokumen
+                </th>
+                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  Ukuran
+                </th>
+                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  File
+                </th>
+                <th></th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+
+            <tbody className="divide-y divide-gray-200 text-center">
+              {informasi.map((member) => (
+                <tr key={member.id}>
+                  <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                    {member.informasi}
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                    {member.judul}
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                    {/* Mengubah format tanggal dengan date-fns */}
+                    {format(new Date(member.created_at), "dd-MM-yyyy")}
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                    {member.dibuat}
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                    {member.ukuran}
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                    <a href={member.url} target="_blank">
+                      Download
+                    </a>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-2 text-red-600">
+                    <DeleteButton
+                      id={member.id}
+                      onSuccess={handleDeleteSuccess}
+                    />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

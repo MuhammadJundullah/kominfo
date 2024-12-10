@@ -12,30 +12,27 @@ function Informasipublik() {
     console.log(
       "Data berhasil dihapus, lakukan refresh data atau tindakan lain."
     );
-    // Anda bisa melakukan refresh data atau update state di sini
   };
 
   const url = "http://localhost:8000/api/informasi-publik";
 
-  // Fetch data ketika komponen pertama kali di-render
   useEffect(() => {
     axios
       .get(url)
       .then((response) => {
-        // Mengambil data dari response.data.data
         if (response.data.status === "success") {
-          setInformasiPublik(response.data.data); // Menyimpan data staff ke state
+          setInformasiPublik(response.data.data);
         }
-        setLoading(false); // Menandakan bahwa loading sudah selesai
+        setLoading(false);
       })
       .catch((error) => {
-        setError(error.message); // Menangani error
-        setLoading(false); // Menandakan bahwa loading sudah selesai
+        setError(error.message);
+        setLoading(false);
       });
-  }, []); // Dependency array kosong, artinya hanya dijalankan sekali saat komponen mount
+  }, []); 
 
-  if (loading) return <Loading></Loading>; // Tampilkan loading jika data sedang diambil
-  if (error) return <p>Error: {error}</p>; // Tampilkan error jika ada
+  if (loading) return <Loading></Loading>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <>

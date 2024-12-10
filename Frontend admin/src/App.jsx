@@ -6,6 +6,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import DataStaff from "./pages/DataStaff";
 import TambahInformasiPublik from "./pages/TambahInformasiPublik";
 import Notfound from "./pages/Notfound";
+import TambahStaff from "./pages/TambahStaff";
 
 const App = () => {
   return (
@@ -37,6 +38,16 @@ const App = () => {
           element={
             <ProtectedRoute>
               <TambahInformasiPublik />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Route untuk Tambah data staff */}
+        <Route
+          path="/data-staff/tambah"
+          element={
+            <ProtectedRoute>
+              <TambahStaff />
             </ProtectedRoute>
           }
         />

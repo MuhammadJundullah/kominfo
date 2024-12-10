@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios"; // Install axios jika belum: npm install axios
+import axios from "axios";
 import AuthenticatedLayout from "../components/AuthenticatedLayout";
 
 function TambahInformasiPublik() {
@@ -42,7 +42,7 @@ function TambahInformasiPublik() {
         <section>
           <div className="py-16 sm:px-6 lg:px-8">
             <div>
-              <div className="lg:mx-44 rounded-lg bg-white p-8 shadow-lg lg:p-12">
+              <div className="lg:mx-44 rounded-lgp-8 shadow-lg lg:p-12">
                 <div className="mb-10">
                   <h1 className="text-4xl font-bold">
                     Tambah Data Informasi Publik
@@ -54,7 +54,7 @@ function TambahInformasiPublik() {
                       Informasi
                     </label>
                     <input
-                      className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                      className="w-full rounded-lg  p-3 text-sm"
                       placeholder="Informasi"
                       type="text"
                       id="informasi"
@@ -68,7 +68,7 @@ function TambahInformasiPublik() {
                       Judul
                     </label>
                     <input
-                      className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                      className="w-full rounded-lg  p-3 text-sm"
                       placeholder="Judul"
                       type="text"
                       id="judul"

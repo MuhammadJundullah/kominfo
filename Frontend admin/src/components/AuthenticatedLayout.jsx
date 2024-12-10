@@ -5,7 +5,7 @@ function AuthenticatedLayout() {
   const location = useLocation();
 
   return (
-    <div className="flex h-screen flex-col justify-between border-e bg-white lg:block hidden">
+    <div className="sm:flex fixed h-screen flex-col justify-between border-e bg-white lg:block hidden">
       <div className="px-4 py-6">
         <span className="items-center justify-center text-center place-content-center rounded-lg bg-gray-100 text-xs text-gray-600">
           <img src="/media/logo.png" alt="logo" className="w-11 mx-auto" />
@@ -17,7 +17,8 @@ function AuthenticatedLayout() {
             <a
               href="/informasi-publik"
               className={`block rounded-lg px-4 py-2 text-sm font-medium ${
-                location.pathname === "/informasi-publik"
+                location.pathname === "/informasi-publik" ||
+                location.pathname === "/informasi-publik/tambah"
                   ? "bg-gray-100 text-gray-700"
                   : "text-gray-500 hover:bg-gray-100 hover:text-gray-700"
               }`}>
@@ -29,7 +30,8 @@ function AuthenticatedLayout() {
             <a
               href="/data-staff"
               className={`block rounded-lg px-4 py-2 text-sm font-medium ${
-                location.pathname === "/data-staff"
+                location.pathname === "/data-staff" ||
+                location.pathname === "/data-staff/tambah"
                   ? "bg-gray-100 text-gray-700"
                   : "text-gray-500 hover:bg-gray-100 hover:text-gray-700"
               }`}>

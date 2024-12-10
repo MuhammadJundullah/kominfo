@@ -3,6 +3,7 @@ import DeleteButton from "../components/DeleteInfoPublik";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
+import Deletestaff from "../components/Deletestaff";
 
 function DataStaff() {
   const [informasi, setInformasiPublik] = useState([]);
@@ -48,10 +49,10 @@ function DataStaff() {
         <h1 className="text-4xl font-bold pb-5">Data Staff</h1>
 
         {/* button tambah */}
-        <div className="py-10">
+        <div className="pb-24">
           <a
-            className="inline-flex items-center gap-2 rounded border border-indigo-600 px-8 py-3 text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
-            href="/staff/tambah">
+            className="inline-flex items-center gap-2 rounded text-indigo-600  hover:text-indigo-400 transition-colors"
+            href="/data-staff/tambah">
             <span className="text-sm font-medium"> Tambah data </span>
 
             <svg
@@ -71,48 +72,50 @@ function DataStaff() {
         </div>
         {/* button tambah */}
 
-        <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
-          <thead className="ltr:text-left rtl:text-right">
-            <tr>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                Nama
-              </th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                Jabatan
-              </th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                Foto
-              </th>
-              <th></th>
-            </tr>
-          </thead>
-
-          <tbody className="divide-y divide-gray-200 text-center">
-            {informasi.map((member) => (
-              <tr key={member.id}>
-                <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                  {member.nama}
-                </td>
-                <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                  {member.jabatan}
-                </td>
-                <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                  <img
-                    src={`http://localhost:8000${member.foto}`}
-                    alt="foto staff"
-                    className="h-20 w-20 object-cover rounded-full mx-auto"
-                  />
-                </td>
-                <td className="whitespace-nowrap px-4 py-2 text-red-600">
-                  <DeleteButton
-                    id={member.id}
-                    onSuccess={handleDeleteSuccess}
-                  />
-                </td>
+        <div className="overflow-auto">
+          <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+            <thead className="ltr:text-left rtl:text-right">
+              <tr>
+                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  Nama
+                </th>
+                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  Jabatan
+                </th>
+                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                  Foto
+                </th>
+                <th></th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+
+            <tbody className="divide-y divide-gray-200 text-center">
+              {informasi.map((member) => (
+                <tr key={member.id}>
+                  <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                    {member.nama}
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                    {member.jabatan}
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                    <img
+                      src={`http://localhost:8000${member.foto}`}
+                      alt="foto staff"
+                      className="h-20 w-20 object-cover rounded-full mx-auto"
+                    />
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-2 text-red-600">
+                    <Deletestaff
+                      id={member.id}
+                      onSuccess={handleDeleteSuccess}
+                    />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
