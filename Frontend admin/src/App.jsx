@@ -52,6 +52,16 @@ const App = () => {
           }
         />
 
+        {/* Route untuk Tambah data staff */}
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <Notfound />
+            </ProtectedRoute>
+          }
+        />
+
         {/* Route untuk halaman Login */}
         <Route path="/login" element={<Login />} />
 
