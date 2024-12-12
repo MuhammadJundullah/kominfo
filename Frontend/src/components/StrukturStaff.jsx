@@ -56,15 +56,58 @@ function StrukturStaff() {
             <h1 className="sm:text-5xl font-bold text-4xl">Pimpinan</h1>
           </div>
           <p className="py-8 leading-10 text-xl">
-            Dinas Komunikasi, Informatika dan Persandian Kota Lhokseumawe
-            memiliki visi "Terciptanya Pelayanan Publik Yang Terbaik melalui
-            penerapan Teknologi Informatika dan Komunikasi Publik yang handal
-            menuju Lhokseumawe Smart City yang beradab, beradat dan bermartabat
-            dalam nuansa islami" Untuk mewujudkan visi tersebut Diskominfo
-            Lhokseumawe memiliki tugas melaksanakan Pengorganisasian,
-            Perencanaan, Pengawasan urusan Integrasi dan Penyebaran Informasi,
-            Kemitraan dan Pengelolaan Media Publik, Aplikasi Informatika,
-            Pengolahan Data, E-Government, Keamanan Informasi dan Persandian.
+            <span className="font-bold">Visi : </span>
+            <br />
+            "Terciptanya Pelayanan Publik yang Terbaik melalui penerapan
+            Teknologi Informatika dan Komunikasi Publik yang handal menuju
+            Lhokseumawe Smart City yang beradab, beradat dan bermartabat dalam
+            nuansa islami"
+            <br />
+            <br />
+            <span className="font-bold">Misi : </span>
+            <br />
+            <ol>
+              <li>
+                1. Meningkatkan kualitas pelayanan pemerintah kepada semua
+                stakeholder;
+              </li>
+              <li>
+                2. Meningkatkan kapasitas layanan informasi dan pemberdayaan
+                potensi masyarakat dalam rangka mewujudkan masyarakat informasi;
+              </li>
+              <li>
+                3. Meningkatkan transparansi, kontrol dan akuntabilitas
+                penyelenggaraan pemerintahan dalam rangka penerapan konsep good
+                governace;
+              </li>
+              <li>
+                4. Meningkatkan kualitas dan sebaran layanan deseminasi
+                informasi melalui kemitraan dengan penyelenggara media dan
+                mengikuti perkembangan teknologi informasi;
+              </li>
+              <li>
+                5. Mendukung proses kerja internal pemerintah kota lhokseumawe
+                dengan pengembangan aplikasi dan sistem informasi manajemen yang
+                handal, update dan bisa menyesuaikan dengan kebutuhan
+                masyarakat;
+              </li>
+              <li>
+                6. Mengoptimalkan pemanfaatan insfrastruktur teknologi
+                komunikasi dan informatika guna mencapai efisiensi dan
+                efektifitas kerja;
+              </li>
+              <li>
+                7. Membangun kualitas jaringan teknologi informasi yang mandiri,
+                terintegritas dan mampu bersinergi dengan pihak-pihak yang
+                memiliki komitmen terhadap pengembangan smart city di kota
+                lhokseumawe;
+              </li>
+              <li>
+                8. Menciptakan sistem kerja berbasis teknologi informasi yang
+                handal dan terjamin keamanannya; Meningkatkan kualitas sumber
+                daya manusia di bidang teknologi informasi dan komunikasi.
+              </li>
+            </ol>
           </p>
           <div>
             <dl className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3 ">

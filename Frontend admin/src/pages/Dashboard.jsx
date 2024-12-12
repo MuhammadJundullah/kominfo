@@ -3,7 +3,8 @@ import DeleteButton from "../components/DeleteInfoPublik";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
-import { format } from "date-fns"; // Import format dari date-fns
+import { format } from "date-fns";
+import BottomNav from "../components/BottomNav";
 
 function Dashboard() {
   const [informasi, setInformasiPublik] = useState([]);
@@ -40,99 +41,104 @@ function Dashboard() {
   if (error) return <p>Error: {error}</p>; // Tampilkan error jika ada
 
   return (
-    <div className="lg:grid grid-cols-6">
-      <div>
-        <AuthenticatedLayout />
-      </div>
-
-      <div className="overflow-x-auto col-span-5 m-10">
-        <h1 className="text-4xl font-bold pb-5">Data Informasi Publik</h1>
-
-        {/* button tambah */}
-        <div className="pb-24">
-          <a
-            className="inline-flex items-center gap-2 rounded text-indigo-600  hover:text-indigo-400 transition-colors"
-            href="/informasi-publik/tambah">
-            <span className="text-sm font-medium"> Tambah data </span>
-
-            <svg
-              className="size-5 rtl:rotate-180"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </a>
+    <div>
+      <div className="lg:grid grid-cols-6">
+        <div>
+          <AuthenticatedLayout />
         </div>
-        {/* button tambah */}
 
-        <div className="overflow-auto">
-          <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
-            <thead className="ltr:text-left rtl:text-right">
-              <tr>
-                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                  Informasi
-                </th>
-                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                  Judul
-                </th>
-                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                  Dibuat
-                </th>
-                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                  Tanggal Dokumen
-                </th>
-                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+        <div className="overflow-x-auto col-span-5 m-10">
+          <h1 className="text-4xl font-bold pb-5">Data Informasi Publik</h1>
+
+          {/* button tambah */}
+          <div className="pb-24">
+            <a
+              className="inline-flex items-center gap-2 rounded text-indigo-600  hover:text-indigo-400 transition-colors"
+              href="/informasi-publik/tambah">
+              <span className="text-sm font-medium"> Tambah data </span>
+
+              <svg
+                className="size-5 rtl:rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
+          {/* button tambah */}
+
+          <div className="overflow-auto">
+            <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+              <thead className="ltr:text-left rtl:text-right">
+                <tr>
+                  <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                    Informasi
+                  </th>
+                  <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                    Judul
+                  </th>
+                  <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                    Dibuat
+                  </th>
+                  <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                    Tanggal Dokumen
+                  </th>
+                  {/* <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                   Ukuran
-                </th>
-                <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                  File
-                </th>
-                <th></th>
-              </tr>
-            </thead>
-
-            <tbody className="divide-y divide-gray-200 text-center">
-              {informasi.map((member) => (
-                <tr key={member.id}>
-                  <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                    {member.informasi}
-                  </td>
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    {member.judul}
-                  </td>
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    {/* Mengubah format tanggal dengan date-fns */}
-                    {format(new Date(member.created_at), "dd-MM-yyyy")}
-                  </td>
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    {member.dibuat}
-                  </td>
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    {member.ukuran}
-                  </td>
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    <a href={member.url} target="_blank">
-                      Download
-                    </a>
-                  </td>
-                  <td className="whitespace-nowrap px-4 py-2 text-red-600">
-                    <DeleteButton
-                      id={member.id}
-                      onSuccess={handleDeleteSuccess}
-                    />
-                  </td>
+                </th> */}
+                  <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                    File
+                  </th>
+                  <th></th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+
+              <tbody className="divide-y divide-gray-200 text-center">
+                {informasi.map((member) => (
+                  <tr key={member.id}>
+                    <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                      {member.informasi}
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                      {member.judul}
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                      {/* Mengubah format tanggal dengan date-fns */}
+                      {format(new Date(member.created_at), "dd-MM-yyyy")}
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                      {member.dibuat}
+                    </td>
+                    {/* <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                    {member.ukuran}
+                  </td> */}
+                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                      <a href={member.url} target="_blank">
+                        Download
+                      </a>
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-2 text-red-600">
+                      <DeleteButton
+                        id={member.id}
+                        onSuccess={handleDeleteSuccess}
+                      />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
+      <div>
+        <BottomNav />
       </div>
     </div>
   );

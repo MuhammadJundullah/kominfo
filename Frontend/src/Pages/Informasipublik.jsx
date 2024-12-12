@@ -1,7 +1,7 @@
-import DeleteButton from "../components/DeleteInfoPublik";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
+import { format } from "date-fns";
 
 function Informasipublik() {
   const [informasi, setInformasiPublik] = useState([]);
@@ -29,7 +29,7 @@ function Informasipublik() {
         setError(error.message);
         setLoading(false);
       });
-  }, []); 
+  }, []);
 
   if (loading) return <Loading></Loading>;
   if (error) return <p>Error: {error}</p>;
@@ -55,9 +55,9 @@ function Informasipublik() {
               <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                 Tanggal Dokumen
               </th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+              {/* <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                 Ukuran
-              </th>
+              </th> */}
               <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                 File
               </th>
@@ -74,14 +74,14 @@ function Informasipublik() {
                   {member.judul}
                 </td>
                 <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                  {member.created_at}
+                  {format(new Date(member.created_at), "dd-MM-yyyy")}
                 </td>
                 <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                   {member.dibuat}
                 </td>
-                <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                {/* <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                   {member.ukuran}
-                </td>
+                </td> */}
                 <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                   <a href={member.url} target="_blank">
                     Download

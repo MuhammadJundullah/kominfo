@@ -4,6 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
 import Deletestaff from "../components/Deletestaff";
+import BottomNav from "../components/BottomNav";
 
 function DataStaff() {
   const [informasi, setInformasiPublik] = useState([]);
@@ -116,6 +117,9 @@ function DataStaff() {
             </tbody>
           </table>
         </div>
+      </div>
+      <div>
+        <BottomNav />
       </div>
     </div>
   );

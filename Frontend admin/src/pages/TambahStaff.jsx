@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import AuthenticatedLayout from "../components/AuthenticatedLayout";
+import BottomNav from "../components/BottomNav";
 
 function TambahStaff() {
   const [formData, setFormData] = useState({
@@ -110,6 +111,9 @@ function TambahStaff() {
             </div>
           </div>
         </section>
+      </div>
+      <div>
+        <BottomNav />
       </div>
     </div>
   );

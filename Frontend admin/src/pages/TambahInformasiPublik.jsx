@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import AuthenticatedLayout from "../components/AuthenticatedLayout";
+import BottomNav from "../components/BottomNav";
 
 function TambahInformasiPublik() {
   const [formData, setFormData] = useState({
@@ -114,6 +115,9 @@ function TambahInformasiPublik() {
             </div>
           </div>
         </section>
+      </div>
+      <div>
+        <BottomNav />
       </div>
     </div>
   );
