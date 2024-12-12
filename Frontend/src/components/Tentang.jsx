@@ -29,11 +29,11 @@ function Tentang() {
     <div className="hero min-h-screen bg-gray-800" id="tentang">
       <div className="hero-content flex-col lg:flex-row-reverse text-white">
         <animated.img
-          ref={ref} // Menambahkan ref ke gambar untuk intersection observer
+          ref={ref}
           src="https://kominfo.lhokseumawekota.go.id/assets/upload/image/icon-lhokseumawe.png"
           className="max-w-xs rounded-lg sm:w-full w-1/2 sm:block hidden md:py-20"
           alt="Logo of Diskominfo Kota Lhokseumawe"
-          style={imgAnimation} // Mengaplikasikan animasi ke gambar
+          style={imgAnimation}
         />
         <animated.div
           ref={ref}

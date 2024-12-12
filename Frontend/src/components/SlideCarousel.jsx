@@ -4,7 +4,7 @@ function SlideCarousel() {
       <div id="slide1" className="carousel-item relative w-full">
         <video src="/media/hero.mp4" className="w-full" autoPlay loop muted />
         <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide2" className="btn btn-circle">
+          <a href="#slide1" className="btn btn-circle">
             ❮
           </a>
           <div className="hero-content text-center">
@@ -31,7 +31,7 @@ function SlideCarousel() {
               </a>
             </div>
           </div>
-          <a href="#slide1" className="btn btn-circle">
+          <a href="#slide2" className="btn btn-circle">
             ❯
           </a>
         </div>
@@ -39,7 +39,7 @@ function SlideCarousel() {
       <div id="slide2" className="carousel-item relative w-full">
         <video src="/media/hero2.webm" className="w-full" autoPlay loop muted />
         <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide2" className="btn btn-circle">
+          <a href="#slide1" className="btn btn-circle">
             ❮
           </a>
           <div className="hero-content text-center">
@@ -66,7 +66,7 @@ function SlideCarousel() {
               </a>
             </div>
           </div>
-          <a href="#slide1" className="btn btn-circle">
+          <a href="#slide2" className="btn btn-circle">
             ❯
           </a>
         </div>
